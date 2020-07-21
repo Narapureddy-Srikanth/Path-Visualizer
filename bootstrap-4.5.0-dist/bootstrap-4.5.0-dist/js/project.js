@@ -6,7 +6,7 @@ rows = 20;
 columns = 50;
 
 // Dimensions of a unit
-const box = 30;
+box = 30;
 var grid = [];
 // Creating the grid 
 function initialization() {
@@ -39,7 +39,8 @@ window.render  = function () {
 
     canvas.width = document.documentElement.clientWidth * 0.98;
     canvas.height = document.documentElement.clientHeight * 0.8;
-
+    // parabolic change
+    box = Math.sqrt(0.6 * canvas.width);
     rows = Math.floor(canvas.height / box);
     columns = Math.floor(canvas.width / box);
     initialization();
