@@ -1,19 +1,37 @@
 
+var queue = [];
 
-function Dfs(){
+function find_min_and_delete_it(){
+
+	let weight = queue[0];
+	let idx = 0;
+	for(let i = 1; i < queue.length; i++){
+		if(weight[2] > queue[i][2]) {
+			weight = queue[i];
+			idx = i;
+		}
+	}
+	queue.splice(idx, 1);
+	return weight;
+}
+
+function Dijkstra(){
 	reset_paths();
-	document.getElementById("output").innerHTML = "Dfs does not guarantees the shortest..."
-
+	document.getElementById("output").innerHTML = "Dijkstra's algorithm guarantees the shortest path for both un/weighted walls..."
 	var dir = [[1,0],[-1,0],[0,1],[0,-1]];
 	var char = ['R', 'L', 'D', 'U'];
 
 	var start = find_state('s');
-	var queue = [start];
+	// starting with empty queue
+	while(queue.length > 0)
+		queue.pop();
+	queue.push([start[0], start[1], 0]);
 	var done = false;
+
 	function animate(){
 		if(queue.length > 0 && !done){
 			draw();
-			var ref = queue.pop();
+			var ref = find_min_and_delete_it();
 			var x = ref[0];
 			var y = ref[1];
 			if(grid[x][y].state != 'f' && grid[x][y].state != 's')
@@ -27,8 +45,8 @@ function Dfs(){
 		        	draw_path();
 		        	done = true;
 		        }
-		        if(0 <= xx && xx < rows && 0 <= yy && yy < columns && (grid[xx][yy].state == 'e' || grid[xx][yy].state == 't')){
-		        	queue.push([xx, yy]);
+		        if(0 <= xx && xx < rows && 0 <= yy && yy < columns && grid[xx][yy].state == 'e'){
+		        	queue.push([xx, yy, 0]); // upon update of weighted wall add weight here
 		        	grid[xx][yy].state = 't';
 		        	grid[xx][yy].direction = char[i];
 		        }
@@ -37,7 +55,4 @@ function Dfs(){
 		}
 	}
 	requestAnimationFrame(animate);
-	if(!done){
-		// TODO : print path not found
-	}
 }
