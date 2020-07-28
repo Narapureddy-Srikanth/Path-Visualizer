@@ -70,6 +70,10 @@ function A_star(){
 	end_idx = find_state('f');
 
 	var start = find_state('s');
+	while(open.length > 0)
+		open.pop();
+	while(close.length > 0)
+		close.pop();
 	open.push([start[0], start[1], 0, 0]);
 	var done = false;
 	var dir = [[1,0],[-1,0],[0,1],[0,-1]];

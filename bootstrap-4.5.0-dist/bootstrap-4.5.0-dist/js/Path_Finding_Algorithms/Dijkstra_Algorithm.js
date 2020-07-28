@@ -1,7 +1,7 @@
 
 var queue = [];
 
-function find_min_and_delete_it(){
+function find_min_and_delete_it_(){
 
 	let weight = queue[0];
 	let idx = 0;
@@ -31,7 +31,7 @@ function Dijkstra(){
 	function animate(){
 		if(queue.length > 0 && !done){
 			draw();
-			var ref = find_min_and_delete_it();
+			var ref = find_min_and_delete_it_();
 			var x = ref[0];
 			var y = ref[1];
 			if(grid[x][y].state != 'f' && grid[x][y].state != 's')
