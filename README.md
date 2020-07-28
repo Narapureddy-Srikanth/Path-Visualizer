@@ -17,4 +17,4 @@
 ### future updates ###
 
 * Adding feature of weighted walls.
-* Including path-finding algorithms Bellman-Ford’s Algorithm and Greedy Best-first Search.
+* Including Bellman-Ford’s Path-Finding Algorithm.
