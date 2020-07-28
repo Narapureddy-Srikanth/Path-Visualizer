@@ -12,6 +12,4 @@
 
 ### How to access ###
 
-```
-    https://narapureddy-srikanth.github.io/Path-Visualizer/
-```
+* https://narapureddy-srikanth.github.io/Path-Visualizer/
