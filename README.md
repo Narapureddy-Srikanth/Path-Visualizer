@@ -12,4 +12,9 @@
 
 ### How to access ###
 
-* https://narapureddy-srikanth.github.io/Path-Visualizer/
+* Browse to this URL https://narapureddy-srikanth.github.io/Path-Visualizer/
+
+### future updates ###
+
+* Adding feature of weighted walls.
+* Including path-finding algorithms Bellman-Ford’s Algorithm and Greedy Best-first Search.
