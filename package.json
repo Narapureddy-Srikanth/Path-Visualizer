@@ -1,0 +1,19 @@
+{
+  "name": "path-visualizer",
+  "version": "1.0.0",
+  "description": "A visualization tool for various pathfinding algorithms.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Narapureddy-Srikanth/Path-Visualizer.git"
+  },
+  "author": "Narapureddy Srikanth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Narapureddy-Srikanth/Path-Visualizer/issues"
+  },
+  "homepage": "https://github.com/Narapureddy-Srikanth/Path-Visualizer#readme"
+}
